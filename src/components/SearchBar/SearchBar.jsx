@@ -1,12 +1,11 @@
 
-
-const SearchContact = ({ value, handleChangeFilterInput }) => {
+const SearchBar = ({ value, handleChangeFilterInput }) => {
     return (
         <div>
             Find contacts by name
             <input
                 type="text"
-                name="Search Contact"
+                name="Search Bar"
                 value={value}
                 onChange={handleChangeFilterInput}
             />
@@ -14,4 +13,4 @@ const SearchContact = ({ value, handleChangeFilterInput }) => {
     )
 };
 
-export default SearchContact;
+export default SearchBar;

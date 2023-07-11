@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import shortid from 'shortid';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
-import SearchContact from './SearchContact/SearchContact';
+import SearchBar from './SearchBar/SearchBar';
+import { StyledMainContainer } from './FileContainer/StyledContainer';
 
 export default class App extends Component {
   state = {
@@ -45,16 +46,16 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <StyledMainContainer>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.handleFormSubmit} />
         <h2>Contacts</h2>
-        <SearchContact value={this.state.filter} handleChangeFilterInput={this.handleChangeFilterInput}/>
+        <SearchBar value={this.state.filter} handleChangeFilterInput={this.handleChangeFilterInput}/>
         <ContactList
           contacts={this.handleFilterContacts()}
           handleDeleteContact={this.handleDeleteContact}
         />
-      </div>
+      </StyledMainContainer>
       
     )
   }
