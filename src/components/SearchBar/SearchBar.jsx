@@ -1,4 +1,5 @@
 import { StyledSearchDiv, StyledSearchInput, StyledSearchLabel, StyledSearchSpan } from "./SearchBarStyled";
+import PropTypes from 'prop-types';
 
 const SearchBar = ({ value, handleChangeFilterInput }) => {
     return (
@@ -19,3 +20,9 @@ const SearchBar = ({ value, handleChangeFilterInput }) => {
 };
 
 export default SearchBar;
+
+
+SearchBar.propTypes = {
+    value: PropTypes.string.isRequired,
+    handleChangeFilterInput: PropTypes.func.isRequired,
+}
