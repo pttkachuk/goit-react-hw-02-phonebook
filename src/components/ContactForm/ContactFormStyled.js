@@ -30,7 +30,7 @@ display: flex;
 
 export const StyledInput = styled.input`
   max-width: 100%;
-  min-width: 280px;
+  min-width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;

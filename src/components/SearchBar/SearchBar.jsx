@@ -1,15 +1,20 @@
+import { StyledSearchDiv, StyledSearchInput, StyledSearchLabel, StyledSearchSpan } from "./SearchBarStyled";
 
 const SearchBar = ({ value, handleChangeFilterInput }) => {
     return (
-        <div>
-            Find contacts by name
-            <input
+        <StyledSearchDiv>
+            <StyledSearchLabel >
+                <StyledSearchSpan>Find contacts by name</StyledSearchSpan>
+                <StyledSearchInput
                 type="text"
                 name="Search Bar"
+                placeholder="Search contact..."
                 value={value}
                 onChange={handleChangeFilterInput}
-            />
-        </div>
+                />
+            </StyledSearchLabel>
+            
+        </StyledSearchDiv>
     )
 };
 
